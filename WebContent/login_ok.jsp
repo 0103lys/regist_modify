@@ -14,7 +14,7 @@
    try {
       conn = Dbconn.getConnection();
       if (conn != null) {
-             sql = "select * from tb_member where mem_userid=? and mem_userpw=?";
+             sql = "SELECT * FROM tb_member WHERE mem_userid=? and mem_userpw=?";
          pstmt = conn.prepareStatement(sql);
          pstmt.setString(1, userid);
          pstmt.setString(2, userpw);
@@ -37,7 +37,7 @@
             
 %>
 <script>
-   alert('로그인 되었습니다');
+   alert('로그인 되었습니다.');
    location.href = 'login.jsp'; // 새로고침
 </script>
 <%
@@ -45,7 +45,7 @@
             // 로그인 실패
 %>
 <script>
-   alert('아이디 또는 비밀번호를 확인하세요');
+   alert('아이디 또는 비밀번호를 확인하세요.');
    history.back(); // 히스토리, 캐시
 </script>
 <%
